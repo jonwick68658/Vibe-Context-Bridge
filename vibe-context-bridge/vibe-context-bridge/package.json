@@ -1,0 +1,50 @@
+{
+  "name": "vibe-context-bridge",
+  "version": "1.0.0",
+  "description": "Revolutionary context management system for AI-assisted development that bridges the gap between human intent and AI execution",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai-development",
+    "vibe-coding",
+    "context-management",
+    "security-automation",
+    "fullstack-continuity",
+    "no-code",
+    "low-code"
+  ],
+  "author": "MiniMax Agent",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/jest": "^29.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "glob": "^10.3.0",
+    "yaml": "^2.3.0"
+  },
+  "files": [
+    "dist/**/*",
+    "schemas/**/*",
+    "templates/**/*",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/vibe-context-bridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/vibe-context-bridge/issues"
+  },
+  "homepage": "https://github.com/your-username/vibe-context-bridge#readme"
+}
