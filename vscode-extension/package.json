@@ -111,7 +111,11 @@
         },
         "vibeContextBridge.securityLevel": {
           "type": "string",
-          "enum": ["basic", "standard", "enterprise"],
+          "enum": [
+            "basic",
+            "standard",
+            "enterprise"
+          ],
           "default": "standard",
           "description": "Security scanning level"
         },
@@ -125,11 +129,15 @@
     "languages": [
       {
         "id": "yaml",
-        "extensions": [".project-context.yaml"]
+        "extensions": [
+          ".project-context.yaml"
+        ]
       },
       {
         "id": "json",
-        "extensions": [".project-context.json"]
+        "extensions": [
+          ".project-context.json"
+        ]
       }
     ],
     "jsonValidation": [

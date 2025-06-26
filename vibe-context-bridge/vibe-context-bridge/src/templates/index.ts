@@ -3,6 +3,7 @@ import { ProjectContext } from '../types';
 export const projectTemplates: Record<string, Partial<ProjectContext>> = {
   'web-app': {
     project: {
+      name: 'Web Application',
       type: 'web-app',
       framework: {
         frontend: 'React',
@@ -33,6 +34,7 @@ export const projectTemplates: Record<string, Partial<ProjectContext>> = {
   
   'e-commerce': {
     project: {
+      name: 'E-commerce Application',
       type: 'web-app',
       framework: {
         frontend: 'React',
@@ -110,6 +112,7 @@ export const projectTemplates: Record<string, Partial<ProjectContext>> = {
 
   'blog': {
     project: {
+      name: 'Blog Application',
       type: 'web-app',
       framework: {
         frontend: 'React',
@@ -166,6 +169,7 @@ export const projectTemplates: Record<string, Partial<ProjectContext>> = {
 
   'dashboard': {
     project: {
+      name: 'Dashboard Application',
       type: 'web-app',
       framework: {
         frontend: 'React',
@@ -224,6 +228,7 @@ export const projectTemplates: Record<string, Partial<ProjectContext>> = {
 
   'api-only': {
     project: {
+      name: 'API Only Application',
       type: 'api',
       framework: {
         backend: 'Express',
@@ -305,7 +310,7 @@ export function getTemplate(templateName: string): Partial<ProjectContext> | nul
 }
 
 export function getSecurityTemplate(level: string): any {
-  return securityTemplates[level] || securityTemplates['standard'];
+  return (securityTemplates as any)[level] || securityTemplates['standard'];
 }
 
 export function listAvailableTemplates(): Array<{ name: string; description: string }> {

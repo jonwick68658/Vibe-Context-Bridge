@@ -381,7 +381,7 @@ export class ContextMemory {
     const areas: string[] = [];
     const patterns = this.analyzeInteractionPatterns();
     
-    patterns.commonActions.forEach(({ action }) => {
+    patterns.commonActions.forEach(({ action }: { action: string }) => {
       switch (action) {
         case 'component-creation':
           areas.push('Frontend Development');

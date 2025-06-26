@@ -1,0 +1,27 @@
+{
+  "buildDate": "2025-06-26T12:08:23.729Z",
+  "version": "1.0.0",
+  "artifacts": [
+    {
+      "name": "vibe-context-bridge.tgz",
+      "description": "Core NPM Package"
+    },
+    {
+      "name": "vibe-context-bridge-vscode.vsix",
+      "description": "VS Code Extension"
+    }
+  ],
+  "installation": {
+    "linux_mac": "./install.sh",
+    "windows": "./install.bat",
+    "manual": "See README.md for manual installation instructions"
+  },
+  "quickStart": [
+    "Extract deployment package",
+    "Run installation script for your platform",
+    "Open VS Code and create/open a project",
+    "Press Ctrl+Shift+P and type \"Vibe Context: Initialize Project\"",
+    "Follow the setup wizard",
+    "Start coding with AI assistance!"
+  ]
+}

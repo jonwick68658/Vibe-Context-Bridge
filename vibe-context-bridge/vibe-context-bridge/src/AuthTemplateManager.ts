@@ -30,10 +30,10 @@ export class AuthTemplateManager {
   /**
    * Generate secure authentication middleware
    */
-  public generateAuthMiddleware(framework: string): string {
+  public async generateAuthMiddleware(framework: string): Promise<string> {
     switch (framework.toLowerCase()) {
       case 'express':
-        return this.generateExpressAuthMiddleware();
+        return await this.generateExpressAuthMiddleware();
       case 'fastify':
         return this.generateFastifyAuthMiddleware();
       case 'next.js':
@@ -690,8 +690,9 @@ export const AuthProvider = ({ children }) => {
 `;
   }
 
-  private generateExpressAuthMiddleware(): string {
-    return this.generateJwtTemplates('').then(templates => templates['middleware/authMiddleware.js'] || '');
+  private async generateExpressAuthMiddleware(): Promise<string> {
+    const templates = await this.generateJwtTemplates('');
+    return templates['middleware/authMiddleware.js'] || '';
   }
 
   private generateFastifyAuthMiddleware(): string {

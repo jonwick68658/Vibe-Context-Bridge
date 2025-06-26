@@ -184,6 +184,7 @@ export interface AiInteraction {
   action: string;
   context: string;
   result: string;
+  metadata?: any;
 }
 
 export interface ValidationResult {
