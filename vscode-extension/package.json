@@ -1,0 +1,155 @@
+{
+  "name": "vibe-context-bridge-vscode",
+  "displayName": "Vibe Context Bridge",
+  "description": "Revolutionary context management for AI-assisted development. Bridges the gap between human intent and AI execution.",
+  "version": "1.0.0",
+  "publisher": "minimax-agent",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Machine Learning",
+    "Snippets",
+    "Linters"
+  ],
+  "keywords": [
+    "ai-development",
+    "context-management",
+    "security-automation",
+    "vibe-coding",
+    "fullstack-continuity",
+    "no-code",
+    "low-code"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vibeContextBridge.initializeProject",
+        "title": "Initialize Vibe Context Bridge",
+        "category": "Vibe Context"
+      },
+      {
+        "command": "vibeContextBridge.scanSecurity",
+        "title": "Scan for Security Issues",
+        "category": "Vibe Context"
+      },
+      {
+        "command": "vibeContextBridge.checkContinuity",
+        "title": "Check Frontend/Backend Continuity",
+        "category": "Vibe Context"
+      },
+      {
+        "command": "vibeContextBridge.generateAuth",
+        "title": "Generate Authentication Templates",
+        "category": "Vibe Context"
+      },
+      {
+        "command": "vibeContextBridge.showContextMemory",
+        "title": "Show Context Memory",
+        "category": "Vibe Context"
+      },
+      {
+        "command": "vibeContextBridge.fixSecurityIssue",
+        "title": "Auto-fix Security Issue",
+        "category": "Vibe Context"
+      },
+      {
+        "command": "vibeContextBridge.updateContext",
+        "title": "Update Context from Code",
+        "category": "Vibe Context"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "vibeContextBridge.initializeProject",
+          "when": "explorerResourceIsFolder"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "vibeContextBridge.fixSecurityIssue",
+          "when": "editorHasSelection"
+        }
+      ]
+    },
+    "views": {
+      "explorer": [
+        {
+          "id": "vibeContextBridge.contextView",
+          "name": "Vibe Context Bridge",
+          "when": "vibeContextBridge.isActive"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "vibeContextBridge",
+          "title": "Vibe Context Bridge",
+          "icon": "$(shield)"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Vibe Context Bridge",
+      "properties": {
+        "vibeContextBridge.autoScan": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically scan for security issues when files change"
+        },
+        "vibeContextBridge.autoFix": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically fix security issues when possible"
+        },
+        "vibeContextBridge.securityLevel": {
+          "type": "string",
+          "enum": ["basic", "standard", "enterprise"],
+          "default": "standard",
+          "description": "Security scanning level"
+        },
+        "vibeContextBridge.contextMemorySize": {
+          "type": "number",
+          "default": 100,
+          "description": "Maximum number of AI interactions to remember"
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "yaml",
+        "extensions": [".project-context.yaml"]
+      },
+      {
+        "id": "json",
+        "extensions": [".project-context.json"]
+      }
+    ],
+    "jsonValidation": [
+      {
+        "fileMatch": ".project-context.json",
+        "url": "./schemas/project-context.schema.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "vibe-context-bridge": "^1.0.0"
+  }
+}
