@@ -1,0 +1,43 @@
+project:
+  name: "Vibe Context Bridge"
+  type: "tool"
+  description: "AI development bridge"
+  framework:
+    frontend: "VS Code"
+    backend: "Node.js"
+    database: "N/A"
+
+security:
+  rules:
+    enforceHttps: true
+    inputSanitization: true
+    sqlInjectionPrevention: true
+    xssProtection: true
+    csrfProtection: true
+    corsConfiguration: true
+    rateLimiting: true
+    dataValidation: true
+
+api:
+  baseUrl: "/api"
+  endpoints: []
+
+authentication:
+  type: "jwt"
+  config:
+    expiry: "15m"
+    refreshToken: true
+  routes:
+    login: "/auth/login"
+    register: "/auth/register"
+    profile: "/auth/profile"
+
+contextMemory:
+  lastUpdated: "2025-06-26T05:20:57.000Z"
+  aiInteractions: []
+  codeGeneration:
+    preferences:
+      codeStyle: "clean"
+      commentLevel: "moderate"
+      errorHandling: "comprehensive"
+      testGeneration: true

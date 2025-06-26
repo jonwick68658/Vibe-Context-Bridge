@@ -279,6 +279,7 @@ console.log('   Linux/Mac: ./install.sh');
 console.log('   Windows:   install.bat');
 console.log('');
 console.log('🌟 This revolutionary tool will bridge the gap between human intent and AI execution!');
+console.log('');
 
 // Return to original directory
 process.chdir(__dirname);
